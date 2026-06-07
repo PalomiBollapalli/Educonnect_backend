@@ -1,4 +1,4 @@
-const API = 'https://educonnect-backend-c6jz.onrender.com/api/doubts';
+const API = 'https://educonnect-backend-c6jz.onrender.com/api/notes';
 const noteForm = document.getElementById('noteForm');
 const titleInput = document.getElementById('title');
 const descriptionInput = document.getElementById('description');
