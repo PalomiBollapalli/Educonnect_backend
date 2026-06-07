@@ -16,7 +16,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
   const email = document.getElementById('email').value.trim();
   const password = document.getElementById('password').value;
 
-  const response = await fetch('http://localhost:3000/api/register', {
+  const response = await fetch('https://educonnect-backend-c6jz.onrender.com/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
