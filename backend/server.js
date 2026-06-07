@@ -22,7 +22,7 @@ app.post('/api/login', loginUser);
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost:27017/educonnect')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to MongoDB');
 
