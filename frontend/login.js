@@ -15,23 +15,40 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const email = document.getElementById('email').value.trim();
   const password = document.getElementById('password').value;
 
-  const response = await fetch('http://localhost:3000/api/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ email, password })
-  });
+  try {
+    const response = await fetch('https://educonnect-backend-c6jz.onrender.com/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    });
 
-  const data = await response.json();
+    const data = await response.json();
 
-  if (response.ok) {
-    localStorage.setItem('user', JSON.stringify(data.user));
-    showNotification('Login successful. Redirecting to your dashboard...', 'success');
-    setTimeout(() => {
-      window.location.href = 'dashboard.html';
-    }, 900);
-  } else {
-    showNotification(data.message || 'Login failed. Please try again.', 'danger');
+    if (response.ok) {
+      localStorage.setItem('user', JSON.stringify(data.user));
+
+      showNotification(
+        'Login successful. Redirecting to your dashboard...',
+        'success'
+      );
+
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 900);
+    } else {
+      showNotification(
+        data.message || 'Login failed. Please try again.',
+        'danger'
+      );
+    }
+  } catch (error) {
+    console.error('Login Error:', error);
+
+    showNotification(
+      'Unable to connect to the server. Please try again later.',
+      'danger'
+    );
   }
 });
