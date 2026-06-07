@@ -6,6 +6,7 @@ import noteRoutes from './routes/noteRoutes.js';
 import doubtRoutes from './routes/doubtRoutes.js';
 
 const app = express();
+
 app.use(express.json());
 app.use(cors());
 
@@ -19,11 +20,14 @@ app.use('/api/doubts', doubtRoutes);
 app.post('/api/register', registerUser);
 app.post('/api/login', loginUser);
 
+const PORT = process.env.PORT || 3000;
+
 mongoose.connect('mongodb://localhost:27017/educonnect')
   .then(() => {
     console.log('Connected to MongoDB');
-    app.listen(3000, () => {
-      console.log('Server is running on port 3000');
+
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((error) => {
