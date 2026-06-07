@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api/doubts';
+const API = 'https://educonnect-backend-c6jz.onrender.com/api/doubts';
 const doubtForm = document.getElementById('doubtForm');
 const titleInput = document.getElementById('title');
 const questionInput = document.getElementById('question');
