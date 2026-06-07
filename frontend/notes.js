@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api/notes';
+const API = 'https://educonnect-backend-c6jz.onrender.com/api/doubts';
 const noteForm = document.getElementById('noteForm');
 const titleInput = document.getElementById('title');
 const descriptionInput = document.getElementById('description');
