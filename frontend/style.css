@@ -1,0 +1,182 @@
+body {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 20%),
+              radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 22%),
+              #eef4ff;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wave::before,
+.hero-wave::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+.hero-wave::before {
+  width: 520px;
+  height: 520px;
+  background: rgba(99, 102, 241, 0.18);
+  top: -160px;
+  right: -120px;
+}
+
+.hero-wave::after {
+  width: 360px;
+  height: 360px;
+  background: rgba(16, 185, 129, 0.16);
+  bottom: -120px;
+  left: -80px;
+}
+
+.navbar-custom {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+.navbar-success-custom {
+  background: linear-gradient(135deg, #15803d, #22c55e);
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-toggler-icon {
+  color: #f8fafc !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+.glass-card,
+.page-card,
+.login-card,
+.register-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 32px 70px rgba(15, 23, 42, 0.12);
+  border-radius: 1.8rem;
+}
+
+.glass-card {
+  backdrop-filter: blur(16px);
+}
+
+.card {
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.16);
+}
+
+.feature-card,
+.note-card,
+.doubt-card,
+.dashboard-panel {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  background: #ffffff;
+}
+
+.feature-icon {
+  width: 72px;
+  height: 72px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2rem;
+  background: rgba(59, 130, 246, 0.1);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary,
+.btn-success {
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4338ca, #0ea5e9);
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #3730a3, #0284c7);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  border: none;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+}
+
+.form-control {
+  border-radius: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.page-title {
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.alert-container {
+  min-height: 60px;
+}
+
+.note-card,
+.doubt-card {
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.note-card .card-body,
+.doubt-card .card-body,
+.dashboard-panel .card-body {
+  position: relative;
+}
+
+.badge-custom {
+  background: rgba(15, 23, 42, 0.07);
+  color: #111827;
+}
+
+footer {
+  margin-top: 50px;
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  .hero-wave::before,
+  .hero-wave::after {
+    display: none;
+  }
+}
